@@ -1,12 +1,12 @@
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import Home from '../components/Home/Home.component';
-import CreateIdea from '../components/CreateIdea/CreateIdea.component';
-import Explore from '../components/Explore/Explore.component';
+import CreateIdeaPage from '../containers/CreateIdeaPage/CreateIdeaPage.container';
+import ExplorePage from '../containers/ExplorePage/ExplorePage.container';
 
 const AppNavigator = createStackNavigator({
   Home,
-  CreateIdea,
-  Explore,
+  CreateIdeaPage,
+  ExplorePage,
 },
 {
   initialRouteName: 'Home',

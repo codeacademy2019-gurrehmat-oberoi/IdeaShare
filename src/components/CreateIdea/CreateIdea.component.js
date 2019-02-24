@@ -9,6 +9,7 @@ import {
   Keyboard,
   TouchableWithoutFeedback,
 } from 'react-native';
+import PropTypes from 'prop-types';
 import styles from './CreateIdea.component.style';
 
 class CreateIdea extends Component {
@@ -25,12 +26,14 @@ class CreateIdea extends Component {
   handleMessageChange = message => this.setState({ message });
 
   handleButtonPress = () => {
+    const { navigation, addNewIdea } = this.props;
+    addNewIdea(this.state);
     this.setState({
       title: '',
       author: '',
       message: '',
     });
-    this.props.navigation.navigate('Home');
+    navigation.navigate('Home');
   }
 
   render() {
@@ -53,5 +56,10 @@ class CreateIdea extends Component {
     );
   }
 }
+
+CreateIdea.propTypes = {
+  navigation: PropTypes.object.isRequired,
+  addNewIdea: PropTypes.func.isRequired,
+};
 
 export default CreateIdea;

@@ -8,12 +8,12 @@ import styles from './Home.component.style';
 class Home extends Component {
   handleCreatePress= () => {
     const { navigation } = this.props;
-    navigation.navigate('CreateIdea');
+    navigation.navigate('CreateIdeaPage');
   }
 
   handleExplorePress=() => {
     const { navigation } = this.props;
-    navigation.navigate('Explore');
+    navigation.navigate('ExplorePage');
   }
 
   render() {

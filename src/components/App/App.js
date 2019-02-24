@@ -8,6 +8,8 @@
  */
 
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import store from '../../redux/store';
 // import { SafeAreaView } from 'react-native';
 // import CreateIdea from '../CreateIdea/CreateIdea.component';
 import Routes from '../../routes';
@@ -16,7 +18,9 @@ import Routes from '../../routes';
 export default class App extends Component {
   render() {
     return (
-      <Routes />
+      <Provider store={store}>
+        <Routes />
+      </Provider>
     );
   }
 }
