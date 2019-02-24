@@ -8,13 +8,15 @@
  */
 
 import React, { Component } from 'react';
-import { SafeAreaView } from 'react-native';
-import Home from '../Home/Home.component';
+// import { SafeAreaView } from 'react-native';
+// import CreateIdea from '../CreateIdea/CreateIdea.component';
+import Routes from '../../routes';
+// import Explore from '../Explore/Explore.component';
 
 export default class App extends Component {
   render() {
     return (
-      <Home />
+      <Routes />
     );
   }
 }

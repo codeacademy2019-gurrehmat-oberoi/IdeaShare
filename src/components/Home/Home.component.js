@@ -2,9 +2,20 @@ import React, { Component } from 'react';
 import {
   SafeAreaView, View, Text, Button,
 } from 'react-native';
+import PropTypes from 'prop-types';
 import styles from './Home.component.style';
 
 class Home extends Component {
+  handleCreatePress= () => {
+    const { navigation } = this.props;
+    navigation.navigate('CreateIdea');
+  }
+
+  handleExplorePress=() => {
+    const { navigation } = this.props;
+    navigation.navigate('Explore');
+  }
+
   render() {
     return (
       <SafeAreaView style={styles.container}>
@@ -16,15 +27,21 @@ class Home extends Component {
           <Button
             style={styles.button}
             title="Explore"
+            onPress={this.handleExplorePress}
           />
           <Button
             style={styles.button}
             title="Create"
+            onPress={this.handleCreatePress}
           />
         </View>
       </SafeAreaView>
     );
   }
 }
+
+Home.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};
 
 export default Home;

@@ -9,14 +9,14 @@ exports[`Home Page should render correctly 1`] = `
       "backgroundColor": "#F5FCFF",
       "flex": 1,
       "justifyContent": "space-around",
+      "padding": 10,
     }
   }
 >
   <View
     style={
       Object {
-        "flex": 2,
-        "justifyContent": "center",
+        "flex": 1,
         "margin": 20,
         "padding": 20,
       }
@@ -47,7 +47,9 @@ exports[`Home Page should render correctly 1`] = `
     style={
       Object {
         "alignItems": "center",
+        "alignSelf": "stretch",
         "flex": 1,
+        "flexDirection": "row",
         "justifyContent": "space-around",
       }
     }
